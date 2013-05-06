@@ -23,6 +23,7 @@
 @property (strong, nonatomic) NSURL        *imageUrl;
 @property (strong, nonatomic) NSData       *imageData;;
 @property (strong, nonatomic) UIImageView  *jokeImage;
+@property (weak, nonatomic)   NSString     *flickrURL;
 
 //-(UIImage *) getsImage:(NSString *)imageUrlString;
 
@@ -32,13 +33,24 @@
 @implementation JokeImage
 
 
--(UIImageView *) isFound:(NSString *)url {
+-(NSString *) isFoundWith:(NSString *)searchParameter {
     
-    // URL string for the random Chuck Norris joke site
-    // @"http://api.icndb.com/jokes/random";
+    /* URL string for Flickr JSON based images
+       @"http://flickr.com/random";
+       http://api.flickr.com/services/rest/?format=json&method=flickr.photosets.getPhotos&photoset_id=THESET&per_page=10&page=1&api_key=XXX&jsoncallback=?
+    
+     
+       Issue an URL to a flickr JSON site with the key= to find an imaage to go with the joke
+     
+       Flickr Key = a7d035d2622c9802a3179ef702b60538
+     
+       Flickr Key Challenge = 49c6e5721b1cc049
+    */
+    NSString *key = @"a7d035d2622c9802a3179ef702b60538";
+    _flickrURL = [NSString stringWithFormat:@"http://api.flickr.com/services/rest/?format=json&method=flickr.photosets.getPhotos&photoset_id=THESET&per_page=10&page=1&api_key=%@&jsoncallback=?", key];
     
     // URL string in encoded format
-    NSString *encodedString = [url stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSString *encodedString = [_flickrURL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     
     // All variables required for the AFSJSONRequestOperation method
     _imageUrl = [NSURL URLWithString:encodedString];
@@ -93,14 +105,16 @@
      
      */
     
+    NSString *imageLocation = @"";
     NSDictionary *jsonArray=[NSJSONSerialization JSONObjectWithData:_response options:NSJSONReadingMutableContainers error:&err];
     if (!jsonArray) {
+        imageLocation = nil;
         NSLog(@"Error parsing JSON data: %@", err);
     } else {
-        _jokeImage = [jsonArray valueForKeyPath:@"value.image"];
+        imageLocation = [jsonArray valueForKeyPath:@"value.image"];
     }
     
-    return _jokeImage;
+    return imageLocation;
 }
 
 

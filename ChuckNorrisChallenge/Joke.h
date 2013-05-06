@@ -10,6 +10,7 @@
 
 @interface Joke : NSObject
 
--(NSString *) isFound:(NSString *)url;
+-(NSString *) isFoundAt:(NSString *)url;
+-(NSString *) hadNounIn:(NSString *)sourceString;
 
 @end

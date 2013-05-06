@@ -24,9 +24,6 @@
 @property (strong, nonatomic) NSData       *jokeData;
 @property (strong, nonatomic) NSString     *jokeText;
 
--(NSString *)isFound:(NSString *)jokeUrl;
--(void)isSpoken:(NSString *)jokeString;
--(UIImage *) getsImage:(NSString *)imageUrlString;
 
 @end
 
@@ -34,7 +31,7 @@
 @implementation Joke
 
 
--(NSString *) isFound:(NSString *)url {
+-(NSString *) isFoundAt:(NSString *)url {
     
     // URL string for the random Chuck Norris joke site
     // @"http://api.icndb.com/jokes/random";
@@ -68,7 +65,7 @@
     
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:self.request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
         // Success Block code.  This code is executed when a web service call is successful
-        NSLog(@"Successful AFSONRequestOperation call");
+        //NSLog(@"Successful AFSONRequestOperation call");
         //NSLog(@"%@", JSON);
         // Turn progress indicator off
         //[MBProgressHUD hideHUDForView:self.view animated:YES];
@@ -107,20 +104,29 @@
     return _jokeText;
 }
 
+// This method looks, in the string passed to it, for the first blank delimited word after the word "is"
+// and returns that word.  It will be taken to be a noun that can be used for topical searchs at the Flickr
+// image library.  The returned value is Nil if no word metting that criteria are is found.
+-(NSString *) hadNounIn:(NSString *)sourceString {
 
--(void) isSpoken:(NSString *)jokeText {
+    // Build a Regular Expression to find the first occurance of a blank
+    // delimited word (noun) after the verb "is"
+    NSError *error = NULL;
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"\\b(a|b)(c|d)\\b"
+                                                                           options:NSRegularExpressionCaseInsensitive
+                                   error:&error];
     
+    
+    // The string substringForFirstMatch holds the first occurrence of a string matching the regular expression
+    // in sourceString
+    NSRange rangeOfFirstMatch = [regex rangeOfFirstMatchInString:sourceString options:0 range:NSMakeRange(0, [sourceString length])];
+    if (!NSEqualRanges(rangeOfFirstMatch, NSMakeRange(NSNotFound, 0))) {
+        NSString *substringForFirstMatch = [sourceString substringWithRange:rangeOfFirstMatch];
+        return substringForFirstMatch;
+    }
+
+    return Nil;
     
 }
-
--(UIImage *) getsImage:(NSString *)ImageURL {
-    
-    self.relatedImage = [[UIImage alloc] init ];
-    
-    
-    return self.relatedImage;
-}
-
-
 
 @end

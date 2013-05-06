@@ -27,7 +27,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    // Do any additional setup after loading the view, typically from a nib.
+    
     
     // The following code is added to allow swipe recognition int the Guessingcat View Controller:
     //    - Right Swipe for next view (JokeViewController)
@@ -57,27 +57,25 @@
 
 
 - (void) leftSwipeHandler:(UIGestureRecognizer *) recognizer {
-    NSLog(@"leftSwipeHandler method entered");
+    //NSLog(@"leftSwipeHandler method entered");
     UISwipeGestureRecognizerDirection direction = [(UISwipeGestureRecognizer *) recognizer direction];
     
     switch (direction) {
         case UISwipeGestureRecognizerDirectionUp:
-            NSLog(@"up");
+            //NSLog(@"up");
             break;
         case UISwipeGestureRecognizerDirectionDown:
-            NSLog(@"down");
+            //NSLog(@"down");
+            break;
+        case UISwipeGestureRecognizerDirectionRight:
+            NSLog(@"right");
             break;
         case UISwipeGestureRecognizerDirectionLeft:
             NSLog(@"left");
-            JokeViewController *jokeViewController = [[JokeViewController alloc]  initWithNibName:@"JokeViewController" bundle:nil];
+            JokeViewController *jokeViewController =[[JokeViewController alloc]  initWithNibName:@"JokeViewController" bundle:nil];
             [self.navigationController pushViewController:jokeViewController animated:YES];
             break;
-    }
-     //   case UISwipeGestureRecognizerDirectionRight:
-     //       NSLog(@"right");
-     //       //[self.navigationController popViewControllerAnimated:YES];
-     //       break;
-    //}
+        }
 }
 
 

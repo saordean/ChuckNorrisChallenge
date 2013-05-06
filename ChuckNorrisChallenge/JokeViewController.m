@@ -44,16 +44,20 @@
     
     // Set the title of the view toolbar, and the text on the back button
     self.title = @"Current joke";
+    
     //NSArray *toolbarStuff = [[NSArray alloc] initWithObjects:@"junk",@"junk",@"junk",nil];
     //[self setToolbarItems:toolbarStuff animated:YES];
     
     // Pass the URL to the method that will return a randowm Chuck Norris joke"
-    _phrase = [[Joke alloc] isFound:@"http://api.icndb.com/jokes/random/" ];
+    _phrase = [[Joke alloc] isFoundAt:@"http://api.icndb.com/jokes/random/" ];
  
     
     // Set the custom font for the label: jokeText
     UIFont *newFont = [UIFont fontWithName:@"celticmd" size:14];
     _jokeText.font = newFont;
+    
+    // Remove occurrences of the string: "&quot" since it isn't spoken or displayed well
+    _phrase = [_phrase stringByReplacingOccurrencesOfString:@"&quot" withString:@""];
     
     // Display the joke in the JokeText label
     _jokeText.text = _phrase;
@@ -61,10 +65,32 @@
     // Display the joke on the console
     //NSLog(@"%@", _phrase);
 
+    
+    // Extract a random noun from the joke to be used as a search argument for the
+    // Flickr JSON interface
+    
+    NSString *randomNoun = [[Joke alloc  ] hadNounIn:_phrase];
+    
+    NSLog(@"The noun to be used for searching Flickr photos is:%@", randomNoun);
+    
+    //_jokeImageURL = [[JokeImage alloc] isFoundWith:randomNoun];
+    _jokeImageURL = nil;
+    
+    if (_jokeImageURL != nil) {
+
+       // Set the UIImageView to the value of the image whose URL was returned from ths search
+        
+        // For testing
+        //NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:@"http://www.myurl.net/test.jpg"]];
+       
+        //NSURL *url = [NSURL URLWithString: [NSString stringWithFormat:_jokeImageURL]];
+       // Set UIImageView image to be the image acquired from the  URL
+       //UIImage *image = [UIImage imageWithData: [NSData dataWithContentsOfURL:url]];
+       //_jokeImageView.image = image;
+    }
+    
     // Speak the joke using the TTS framework
     [self.fliteController say:_phrase withVoice:self.slt];
-    
-    //[self.oldJokesTableView reloadData];
     
 }
 
@@ -75,73 +101,18 @@
 }
 
 
-- (void) jokeImageSearch:(NSString *)searchWord {
-    /*
-     // All variables required
-     NSString *unencodedUrl = [NSString alloc];
-     unencodedUrl = @"http://www.flickr.com";
-     NSString *encodedString = [unencodedUrl stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-     NSURL         *imageUrl = [NSURL URLWithString:encodedString];
-     NSURLRequest  *request = [NSURLRequest requestWithURL:imageUrl];
-     NSURLRequest  *theRequest = [NSURLRequest requestWithURL:imageUrl];
-     NSURLResponse *resp = nil;
-     NSError *err = nil;
-     
-     NSURLConnection *response = [NSURLConnection sendSynchronousRequest: theRequest returningResponse: &resp error: &err];
-     if (response == nil) {
-     NSLog(@"The was problem accessing the Flickr imaage data, try again");
-     }
-     
-     [AFJSONRequestOperation addAcceptableContentTypes:[NSSet setWithObject:@"text/html"]];
-     
-     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
-     // Success Block code, this code is executed when a web service call is successful
-     NSLog(@"%@", JSON);
-     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
-     // Failure Block code, his code is executed when a web service call doesn't work.
-     NSLog(@"Web image search failed: %@", error);
-     
-     }];
-     [operation start];
-     */
-}
-
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
-    
-    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
-    }
-    
-    id cellJoke = self.jokes[indexPath.row];
-    
-    cell.textLabel.text = [NSString stringWithFormat:@"%@",cellJoke];
-    return cell;
-}
-
-
-
-// Compensates for the Table View cell size
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 95.0;
-}
-
-
-
-
 - (void) rightSwipeHandler:(UIGestureRecognizer *) recognizer {
     UISwipeGestureRecognizerDirection direction = [(UISwipeGestureRecognizer *) recognizer direction];
     
     switch (direction) {
         case UISwipeGestureRecognizerDirectionUp:
-            NSLog(@"up");
+            //NSLog(@"up");
             break;
         case UISwipeGestureRecognizerDirectionDown:
-            NSLog(@"down");
+            //NSLog(@"down");
             break;
         case UISwipeGestureRecognizerDirectionLeft:
-            NSLog(@"left");
+            //NSLog(@"left");
             // The statements below are found in the ViewController.m for this application and allow this veiw to be
             // reached via a right swipe
             //NSLog(@"left");

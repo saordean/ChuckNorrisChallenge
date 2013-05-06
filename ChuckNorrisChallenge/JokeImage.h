@@ -10,6 +10,6 @@
 
 @interface JokeImage : NSObject
 
--(UIImageView *) isFound:(NSString *)url;
+-(NSString *) isFoundWith:(NSString *)url;
 
 @end

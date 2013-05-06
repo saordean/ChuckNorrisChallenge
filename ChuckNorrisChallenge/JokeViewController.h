@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import "Joke.h"
+#import "JokeImage.h"
+
 
 
 @interface JokeViewController : ViewController<UIAlertViewDelegate, UITableViewDataSource>
@@ -22,6 +24,7 @@
 
 // Outlets for the joke text and joke image
 @property (strong, nonatomic) IBOutlet UILabel *jokeText;
-@property (strong, nonatomic) IBOutlet UIImageView *jokeImage;
+@property (strong, nonatomic) IBOutlet UIImageView *jokeImageView;
+@property (strong, nonatomic) NSString *jokeImageURL;
 
 @end
