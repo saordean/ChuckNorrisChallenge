@@ -53,6 +53,7 @@
 		F2E6771E173762C700AD9308 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2E6771D173762C700AD9308 /* Default@2x.png */; };
 		F2E677201737645400AD9308 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2E6771F1737645400AD9308 /* MobileCoreServices.framework */; };
 		F2E677221737648500AD9308 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2E677211737648500AD9308 /* SystemConfiguration.framework */; };
+		F2E6772617378AB300AD9308 /* JokeImage.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E6772517378AB300AD9308 /* JokeImage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -121,6 +122,8 @@
 		F2E6771D173762C700AD9308 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		F2E6771F1737645400AD9308 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		F2E677211737648500AD9308 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		F2E6772417378AB300AD9308 /* JokeImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JokeImage.h; sourceTree = "<group>"; };
+		F2E6772517378AB300AD9308 /* JokeImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JokeImage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,6 +277,8 @@
 			children = (
 				F2E67712173755AA00AD9308 /* Joke.h */,
 				F2E67713173755AA00AD9308 /* Joke.m */,
+				F2E6772417378AB300AD9308 /* JokeImage.h */,
+				F2E6772517378AB300AD9308 /* JokeImage.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -376,6 +381,7 @@
 				F2E6770617374CFF00AD9308 /* MBProgressHUD.m in Sources */,
 				F2E6770A1737536800AD9308 /* JokeViewController.m in Sources */,
 				F2E67714173755AB00AD9308 /* Joke.m in Sources */,
+				F2E6772617378AB300AD9308 /* JokeImage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,6 +512,7 @@
 				F2E676C017374BF100AD9308 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

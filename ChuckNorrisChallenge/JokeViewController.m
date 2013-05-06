@@ -11,6 +11,8 @@
 
 @interface JokeViewController ()
 
+@property (nonatomic, strong) NSArray *jokes;
+
 @end
 
 @implementation JokeViewController
@@ -28,6 +30,17 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    self.swipeJokesLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(leftSwipeHandler:)];
+    self.swipeJokesLeft.direction = UISwipeGestureRecognizerDirectionLeft;
+    // I think the line below accomplishes the same as above (?)
+    //[_swipeJokesLeft setDirection:UISwipeGestureRecognizerDirectionLeft];
+    [self.view addGestureRecognizer:self.swipeJokesLeft];
+    
+    self.title = @"Last Ten Chuck Norris Jokes";
+    
+    [self.oldJokesTableView reloadData];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -69,14 +82,31 @@
 }
 
 
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+    
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+    }
+    
+    id cellJoke = self.jokes[indexPath.row];
+    
+    cell.textLabel.text = [NSString stringWithFormat:@"%@",cellJoke];
+    return cell;
+}
+
+
+
 // Compensates for the Table View cell size
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 95.0;
 }
 
 
-- (IBAction) handleJokeSwipes:(UIGestureRecognizer *) sender {
-    UISwipeGestureRecognizerDirection direction = [(UISwipeGestureRecognizer *) sender direction];
+
+
+- (void) leftSwipeHandler:(UIGestureRecognizer *) recognizer {
+    UISwipeGestureRecognizerDirection direction = [(UISwipeGestureRecognizer *) recognizer direction];
     
     switch (direction) {
         case UISwipeGestureRecognizerDirectionUp:

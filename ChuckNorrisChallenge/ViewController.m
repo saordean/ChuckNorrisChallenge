@@ -15,6 +15,8 @@
 
 @interface ViewController ()
 
+@property (strong, nonatomic) NSString *phrase;
+
 @end
 
 @implementation ViewController
@@ -35,7 +37,7 @@
     //    - Up Swipe - no action
     //    - Down Swipt - no action
     
-    self.swipeJokesRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleGuessingCatSwipes:)];
+    self.swipeJokesRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(rightSwipeHandler:)];
     self.swipeJokesRight.direction = UISwipeGestureRecognizerDirectionRight;
     // I think the line below accomplishes the same as above (?)
     //[_swipeJokesRight setDirection:UISwipeGestureRecognizerDirectionRight];
@@ -53,13 +55,20 @@
 - (IBAction)getJokeButton:(id)sender {
     
     // Pass the URL to the method that will return a randowm Chuck Norris joke"
-    NSLog(@"%@", [[Joke alloc] isFound:@"http://api.icndb.com/jokes/random/" ]);
-    
+    _phrase = [[Joke alloc] isFound:@"http://api.icndb.com/jokes/random/" ];
+    NSLog(@"%@", _phrase);
+    JokeViewController *jokeViewController = [[JokeViewController alloc]  initWithNibName:@"JokeViewController" bundle:nil];
+    [self.navigationController pushViewController:jokeViewController animated:YES];
+
+    // Say the joke
+    [self.fliteController say:_phrase withVoice:self.slt];
+
 }
 
 
-- (IBAction) handleJokeSwipes:(UIGestureRecognizer *) sender {
-    UISwipeGestureRecognizerDirection direction = [(UISwipeGestureRecognizer *) sender direction];
+- (void) rightSwipeHandler:(UIGestureRecognizer *) recognizer {
+    NSLog(@"rightSwipeHandler method entered");
+    UISwipeGestureRecognizerDirection direction = [(UISwipeGestureRecognizer *) recognizer direction];
     
     switch (direction) {
         case UISwipeGestureRecognizerDirectionUp:
@@ -74,8 +83,7 @@
             break;
         case UISwipeGestureRecognizerDirectionRight:
             NSLog(@"right");
-            JokeViewController *jokeViewController = [[JokeViewController alloc]  initWithNibName:@"JokeViewController"
-                                                                                           bundle:nil];
+            JokeViewController *jokeViewController = [[JokeViewController alloc]  initWithNibName:@"JokeViewController" bundle:nil];
             [self.navigationController pushViewController:jokeViewController animated:YES];
             break;
     }

@@ -21,7 +21,10 @@
 - (IBAction)getJokeButton:(id)sender;
 
 // Added to allow for swiping
-@property (nonatomic, strong) UISwipeGestureRecognizer *swipeJokesRight;
-- (IBAction) handleJokeSwipes:(UIGestureRecognizer *) sender;
+@property (strong, nonatomic) UISwipeGestureRecognizer *swipeJokesRight;
+- (void) rightSwipeHandler:(UIGestureRecognizer *) recognizer;
+
+// Added to provide an outlet to the joke image
+@property (strong, nonatomic) IBOutlet UIImageView  *jokeImage;
 
 @end

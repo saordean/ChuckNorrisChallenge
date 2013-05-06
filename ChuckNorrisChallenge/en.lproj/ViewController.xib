@@ -131,6 +131,14 @@
 					<int key="connectionID">7</int>
 				</object>
 				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">jokeImage</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="333811945"/>
+					</object>
+					<int key="connectionID">30</int>
+				</object>
+				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
 						<string key="label">getJokeButton:</string>
 						<reference key="source" ref="279464916"/>
@@ -195,27 +203,35 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">29</int>
+			<int key="maxID">30</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<object class="IBPartialClassDescription">
 					<string key="className">ViewController</string>
 					<string key="superclassName">UIViewController</string>
-					<dictionary class="NSMutableDictionary" key="actions">
-						<string key="getJokeButton:">id</string>
-						<string key="handleJokeSwipes:">UIGestureRecognizer</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="actionInfosByName">
-						<object class="IBActionInfo" key="getJokeButton:">
+					<object class="NSMutableDictionary" key="actions">
+						<string key="NS.key.0">getJokeButton:</string>
+						<string key="NS.object.0">id</string>
+					</object>
+					<object class="NSMutableDictionary" key="actionInfosByName">
+						<string key="NS.key.0">getJokeButton:</string>
+						<object class="IBActionInfo" key="NS.object.0">
 							<string key="name">getJokeButton:</string>
 							<string key="candidateClassName">id</string>
 						</object>
-						<object class="IBActionInfo" key="handleJokeSwipes:">
-							<string key="name">handleJokeSwipes:</string>
-							<string key="candidateClassName">UIGestureRecognizer</string>
+					</object>
+					<object class="NSMutableDictionary" key="outlets">
+						<string key="NS.key.0">jokeImage</string>
+						<string key="NS.object.0">UIImageView</string>
+					</object>
+					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<string key="NS.key.0">jokeImage</string>
+						<object class="IBToOneOutletInfo" key="NS.object.0">
+							<string key="name">jokeImage</string>
+							<string key="candidateClassName">UIImageView</string>
 						</object>
-					</dictionary>
+					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">./Classes/ViewController.h</string>
