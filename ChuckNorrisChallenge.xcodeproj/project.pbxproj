@@ -13,11 +13,46 @@
 		F2E676A917374BF100AD9308 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F2E676A717374BF100AD9308 /* InfoPlist.strings */; };
 		F2E676AB17374BF100AD9308 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E676AA17374BF100AD9308 /* main.m */; };
 		F2E676AF17374BF100AD9308 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E676AE17374BF100AD9308 /* AppDelegate.m */; };
-		F2E676B117374BF100AD9308 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F2E676B017374BF100AD9308 /* Default.png */; };
-		F2E676B317374BF100AD9308 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2E676B217374BF100AD9308 /* Default@2x.png */; };
-		F2E676B517374BF100AD9308 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2E676B417374BF100AD9308 /* Default-568h@2x.png */; };
 		F2E676B817374BF100AD9308 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E676B717374BF100AD9308 /* ViewController.m */; };
 		F2E676BB17374BF100AD9308 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2E676B917374BF100AD9308 /* ViewController.xib */; };
+		F2E676C217374C5100AD9308 /* Vh-5-chuck-norris-and-onions.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F2E676C117374C5100AD9308 /* Vh-5-chuck-norris-and-onions.jpg */; };
+		F2E676C417374C6300AD9308 /* CN_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F2E676C317374C6300AD9308 /* CN_icon.png */; };
+		F2E676C617374C7400AD9308 /* CN_icon_small.png in Resources */ = {isa = PBXBuildFile; fileRef = F2E676C517374C7400AD9308 /* CN_icon_small.png */; };
+		F2E676DB17374CA100AD9308 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E676C917374CA100AD9308 /* AFHTTPClient.m */; };
+		F2E676DC17374CA100AD9308 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E676CB17374CA100AD9308 /* AFHTTPRequestOperation.m */; };
+		F2E676DD17374CA100AD9308 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E676CD17374CA100AD9308 /* AFImageRequestOperation.m */; };
+		F2E676DE17374CA100AD9308 /* AFJSONRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E676CF17374CA100AD9308 /* AFJSONRequestOperation.m */; };
+		F2E676DF17374CA100AD9308 /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E676D117374CA100AD9308 /* AFNetworkActivityIndicatorManager.m */; };
+		F2E676E017374CA100AD9308 /* AFPropertyListRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E676D417374CA100AD9308 /* AFPropertyListRequestOperation.m */; };
+		F2E676E117374CA100AD9308 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E676D617374CA100AD9308 /* AFURLConnectionOperation.m */; };
+		F2E676E217374CA100AD9308 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E676D817374CA100AD9308 /* AFXMLRequestOperation.m */; };
+		F2E676E317374CA100AD9308 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E676DA17374CA100AD9308 /* UIImageView+AFNetworking.m */; };
+		F2E676F517374CC900AD9308 /* cmu07a.dic in Resources */ = {isa = PBXBuildFile; fileRef = F2E676E517374CC900AD9308 /* cmu07a.dic */; };
+		F2E676F617374CC900AD9308 /* feat.params in Resources */ = {isa = PBXBuildFile; fileRef = F2E676E717374CC900AD9308 /* feat.params */; };
+		F2E676F717374CC900AD9308 /* mdef in Resources */ = {isa = PBXBuildFile; fileRef = F2E676E817374CC900AD9308 /* mdef */; };
+		F2E676F817374CC900AD9308 /* means in Resources */ = {isa = PBXBuildFile; fileRef = F2E676E917374CC900AD9308 /* means */; };
+		F2E676F917374CC900AD9308 /* noisedict in Resources */ = {isa = PBXBuildFile; fileRef = F2E676EA17374CC900AD9308 /* noisedict */; };
+		F2E676FA17374CC900AD9308 /* sendump in Resources */ = {isa = PBXBuildFile; fileRef = F2E676EB17374CC900AD9308 /* sendump */; };
+		F2E676FB17374CC900AD9308 /* transition_matrices in Resources */ = {isa = PBXBuildFile; fileRef = F2E676EC17374CC900AD9308 /* transition_matrices */; };
+		F2E676FC17374CC900AD9308 /* variances in Resources */ = {isa = PBXBuildFile; fileRef = F2E676ED17374CC900AD9308 /* variances */; };
+		F2E676FD17374CC900AD9308 /* OpenEars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2E676EE17374CC900AD9308 /* OpenEars.framework */; };
+		F2E676FE17374CC900AD9308 /* OpenEars1.dic in Resources */ = {isa = PBXBuildFile; fileRef = F2E676EF17374CC900AD9308 /* OpenEars1.dic */; };
+		F2E676FF17374CC900AD9308 /* OpenEars1.gram in Resources */ = {isa = PBXBuildFile; fileRef = F2E676F017374CC900AD9308 /* OpenEars1.gram */; };
+		F2E6770017374CC900AD9308 /* OpenEars1.languagemodel in Resources */ = {isa = PBXBuildFile; fileRef = F2E676F117374CC900AD9308 /* OpenEars1.languagemodel */; };
+		F2E6770117374CC900AD9308 /* OpenEars2.gram in Resources */ = {isa = PBXBuildFile; fileRef = F2E676F217374CC900AD9308 /* OpenEars2.gram */; };
+		F2E6770217374CC900AD9308 /* OpenEarsCorpus.txt in Resources */ = {isa = PBXBuildFile; fileRef = F2E676F317374CC900AD9308 /* OpenEarsCorpus.txt */; };
+		F2E6770317374CC900AD9308 /* Slt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2E676F417374CC900AD9308 /* Slt.framework */; };
+		F2E6770617374CFF00AD9308 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E6770517374CFF00AD9308 /* MBProgressHUD.m */; };
+		F2E6770A1737536800AD9308 /* JokeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E677081737536800AD9308 /* JokeViewController.m */; };
+		F2E6770B1737536800AD9308 /* JokeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2E677091737536800AD9308 /* JokeViewController.xib */; };
+		F2E6770D173754F800AD9308 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2E6770C173754F800AD9308 /* AudioToolbox.framework */; };
+		F2E6770F1737550200AD9308 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2E6770E1737550200AD9308 /* AVFoundation.framework */; };
+		F2E67714173755AB00AD9308 /* Joke.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E67713173755AA00AD9308 /* Joke.m */; };
+		F2E6771A173762A000AD9308 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F2E67719173762A000AD9308 /* Default.png */; };
+		F2E6771C173762AD00AD9308 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2E6771B173762AD00AD9308 /* Default-568h@2x.png */; };
+		F2E6771E173762C700AD9308 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2E6771D173762C700AD9308 /* Default@2x.png */; };
+		F2E677201737645400AD9308 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2E6771F1737645400AD9308 /* MobileCoreServices.framework */; };
+		F2E677221737648500AD9308 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2E677211737648500AD9308 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,12 +66,61 @@
 		F2E676AC17374BF100AD9308 /* ChuckNorrisChallenge-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ChuckNorrisChallenge-Prefix.pch"; sourceTree = "<group>"; };
 		F2E676AD17374BF100AD9308 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F2E676AE17374BF100AD9308 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F2E676B017374BF100AD9308 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		F2E676B217374BF100AD9308 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		F2E676B417374BF100AD9308 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		F2E676B617374BF100AD9308 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		F2E676B717374BF100AD9308 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F2E676BA17374BF100AD9308 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		F2E676C117374C5100AD9308 /* Vh-5-chuck-norris-and-onions.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Vh-5-chuck-norris-and-onions.jpg"; sourceTree = "<group>"; };
+		F2E676C317374C6300AD9308 /* CN_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CN_icon.png; sourceTree = "<group>"; };
+		F2E676C517374C7400AD9308 /* CN_icon_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CN_icon_small.png; sourceTree = "<group>"; };
+		F2E676C817374CA100AD9308 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
+		F2E676C917374CA100AD9308 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
+		F2E676CA17374CA100AD9308 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		F2E676CB17374CA100AD9308 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		F2E676CC17374CA100AD9308 /* AFImageRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFImageRequestOperation.h; sourceTree = "<group>"; };
+		F2E676CD17374CA100AD9308 /* AFImageRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageRequestOperation.m; sourceTree = "<group>"; };
+		F2E676CE17374CA100AD9308 /* AFJSONRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFJSONRequestOperation.h; sourceTree = "<group>"; };
+		F2E676CF17374CA100AD9308 /* AFJSONRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFJSONRequestOperation.m; sourceTree = "<group>"; };
+		F2E676D017374CA100AD9308 /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
+		F2E676D117374CA100AD9308 /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
+		F2E676D217374CA100AD9308 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		F2E676D317374CA100AD9308 /* AFPropertyListRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPropertyListRequestOperation.h; sourceTree = "<group>"; };
+		F2E676D417374CA100AD9308 /* AFPropertyListRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFPropertyListRequestOperation.m; sourceTree = "<group>"; };
+		F2E676D517374CA100AD9308 /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		F2E676D617374CA100AD9308 /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		F2E676D717374CA100AD9308 /* AFXMLRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFXMLRequestOperation.h; sourceTree = "<group>"; };
+		F2E676D817374CA100AD9308 /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
+		F2E676D917374CA100AD9308 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
+		F2E676DA17374CA100AD9308 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		F2E676E517374CC900AD9308 /* cmu07a.dic */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cmu07a.dic; sourceTree = "<group>"; };
+		F2E676E717374CC900AD9308 /* feat.params */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = feat.params; sourceTree = "<group>"; };
+		F2E676E817374CC900AD9308 /* mdef */ = {isa = PBXFileReference; lastKnownFileType = file; path = mdef; sourceTree = "<group>"; };
+		F2E676E917374CC900AD9308 /* means */ = {isa = PBXFileReference; lastKnownFileType = file; path = means; sourceTree = "<group>"; };
+		F2E676EA17374CC900AD9308 /* noisedict */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = noisedict; sourceTree = "<group>"; };
+		F2E676EB17374CC900AD9308 /* sendump */ = {isa = PBXFileReference; lastKnownFileType = file; path = sendump; sourceTree = "<group>"; };
+		F2E676EC17374CC900AD9308 /* transition_matrices */ = {isa = PBXFileReference; lastKnownFileType = file; path = transition_matrices; sourceTree = "<group>"; };
+		F2E676ED17374CC900AD9308 /* variances */ = {isa = PBXFileReference; lastKnownFileType = file; path = variances; sourceTree = "<group>"; };
+		F2E676EE17374CC900AD9308 /* OpenEars.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OpenEars.framework; sourceTree = "<group>"; };
+		F2E676EF17374CC900AD9308 /* OpenEars1.dic */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OpenEars1.dic; sourceTree = "<group>"; };
+		F2E676F017374CC900AD9308 /* OpenEars1.gram */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OpenEars1.gram; sourceTree = "<group>"; };
+		F2E676F117374CC900AD9308 /* OpenEars1.languagemodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OpenEars1.languagemodel; sourceTree = "<group>"; };
+		F2E676F217374CC900AD9308 /* OpenEars2.gram */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OpenEars2.gram; sourceTree = "<group>"; };
+		F2E676F317374CC900AD9308 /* OpenEarsCorpus.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OpenEarsCorpus.txt; sourceTree = "<group>"; };
+		F2E676F417374CC900AD9308 /* Slt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Slt.framework; sourceTree = "<group>"; };
+		F2E6770417374CEC00AD9308 /* MBProgressHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		F2E6770517374CFF00AD9308 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		F2E677071737536800AD9308 /* JokeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JokeViewController.h; sourceTree = "<group>"; };
+		F2E677081737536800AD9308 /* JokeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JokeViewController.m; sourceTree = "<group>"; };
+		F2E677091737536800AD9308 /* JokeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JokeViewController.xib; sourceTree = "<group>"; };
+		F2E6770C173754F800AD9308 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		F2E6770E1737550200AD9308 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		F2E677101737551000AD9308 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		F2E67712173755AA00AD9308 /* Joke.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Joke.h; sourceTree = "<group>"; };
+		F2E67713173755AA00AD9308 /* Joke.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Joke.m; sourceTree = "<group>"; };
+		F2E67719173762A000AD9308 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		F2E6771B173762AD00AD9308 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		F2E6771D173762C700AD9308 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		F2E6771F1737645400AD9308 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		F2E677211737648500AD9308 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,9 +128,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2E677221737648500AD9308 /* SystemConfiguration.framework in Frameworks */,
+				F2E677201737645400AD9308 /* MobileCoreServices.framework in Frameworks */,
+				F2E6770F1737550200AD9308 /* AVFoundation.framework in Frameworks */,
+				F2E6770D173754F800AD9308 /* AudioToolbox.framework in Frameworks */,
 				F2E6769F17374BF100AD9308 /* UIKit.framework in Frameworks */,
 				F2E676A117374BF100AD9308 /* Foundation.framework in Frameworks */,
 				F2E676A317374BF100AD9308 /* CoreGraphics.framework in Frameworks */,
+				F2E676FD17374CC900AD9308 /* OpenEars.framework in Frameworks */,
+				F2E6770317374CC900AD9308 /* Slt.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +163,11 @@
 		F2E6769D17374BF100AD9308 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F2E677211737648500AD9308 /* SystemConfiguration.framework */,
+				F2E6771F1737645400AD9308 /* MobileCoreServices.framework */,
+				F2E677101737551000AD9308 /* CoreAudio.framework */,
+				F2E6770E1737550200AD9308 /* AVFoundation.framework */,
+				F2E6770C173754F800AD9308 /* AudioToolbox.framework */,
 				F2E6769E17374BF100AD9308 /* UIKit.framework */,
 				F2E676A017374BF100AD9308 /* Foundation.framework */,
 				F2E676A217374BF100AD9308 /* CoreGraphics.framework */,
@@ -83,12 +178,20 @@
 		F2E676A417374BF100AD9308 /* ChuckNorrisChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				F2E677231737663300AD9308 /* Model */,
+				F2E6770417374CEC00AD9308 /* MBProgressHUD.h */,
+				F2E6770517374CFF00AD9308 /* MBProgressHUD.m */,
+				F2E676E417374CC900AD9308 /* Framework */,
 				F2E676AD17374BF100AD9308 /* AppDelegate.h */,
+				F2E676C717374CA100AD9308 /* AFNetworking */,
 				F2E676AE17374BF100AD9308 /* AppDelegate.m */,
 				F2E676B617374BF100AD9308 /* ViewController.h */,
 				F2E676B717374BF100AD9308 /* ViewController.m */,
 				F2E676B917374BF100AD9308 /* ViewController.xib */,
 				F2E676A517374BF100AD9308 /* Supporting Files */,
+				F2E677071737536800AD9308 /* JokeViewController.h */,
+				F2E677081737536800AD9308 /* JokeViewController.m */,
+				F2E677091737536800AD9308 /* JokeViewController.xib */,
 			);
 			path = ChuckNorrisChallenge;
 			sourceTree = "<group>";
@@ -96,15 +199,83 @@
 		F2E676A517374BF100AD9308 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F2E6771D173762C700AD9308 /* Default@2x.png */,
+				F2E67719173762A000AD9308 /* Default.png */,
+				F2E676C517374C7400AD9308 /* CN_icon_small.png */,
+				F2E6771B173762AD00AD9308 /* Default-568h@2x.png */,
+				F2E676C317374C6300AD9308 /* CN_icon.png */,
 				F2E676A617374BF100AD9308 /* ChuckNorrisChallenge-Info.plist */,
 				F2E676A717374BF100AD9308 /* InfoPlist.strings */,
 				F2E676AA17374BF100AD9308 /* main.m */,
+				F2E676C117374C5100AD9308 /* Vh-5-chuck-norris-and-onions.jpg */,
 				F2E676AC17374BF100AD9308 /* ChuckNorrisChallenge-Prefix.pch */,
-				F2E676B017374BF100AD9308 /* Default.png */,
-				F2E676B217374BF100AD9308 /* Default@2x.png */,
-				F2E676B417374BF100AD9308 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F2E676C717374CA100AD9308 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				F2E676C817374CA100AD9308 /* AFHTTPClient.h */,
+				F2E676C917374CA100AD9308 /* AFHTTPClient.m */,
+				F2E676CA17374CA100AD9308 /* AFHTTPRequestOperation.h */,
+				F2E676CB17374CA100AD9308 /* AFHTTPRequestOperation.m */,
+				F2E676CC17374CA100AD9308 /* AFImageRequestOperation.h */,
+				F2E676CD17374CA100AD9308 /* AFImageRequestOperation.m */,
+				F2E676CE17374CA100AD9308 /* AFJSONRequestOperation.h */,
+				F2E676CF17374CA100AD9308 /* AFJSONRequestOperation.m */,
+				F2E676D017374CA100AD9308 /* AFNetworkActivityIndicatorManager.h */,
+				F2E676D117374CA100AD9308 /* AFNetworkActivityIndicatorManager.m */,
+				F2E676D217374CA100AD9308 /* AFNetworking.h */,
+				F2E676D317374CA100AD9308 /* AFPropertyListRequestOperation.h */,
+				F2E676D417374CA100AD9308 /* AFPropertyListRequestOperation.m */,
+				F2E676D517374CA100AD9308 /* AFURLConnectionOperation.h */,
+				F2E676D617374CA100AD9308 /* AFURLConnectionOperation.m */,
+				F2E676D717374CA100AD9308 /* AFXMLRequestOperation.h */,
+				F2E676D817374CA100AD9308 /* AFXMLRequestOperation.m */,
+				F2E676D917374CA100AD9308 /* UIImageView+AFNetworking.h */,
+				F2E676DA17374CA100AD9308 /* UIImageView+AFNetworking.m */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		F2E676E417374CC900AD9308 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				F2E676E517374CC900AD9308 /* cmu07a.dic */,
+				F2E676E617374CC900AD9308 /* hub4wsj_sc_8k */,
+				F2E676EE17374CC900AD9308 /* OpenEars.framework */,
+				F2E676EF17374CC900AD9308 /* OpenEars1.dic */,
+				F2E676F017374CC900AD9308 /* OpenEars1.gram */,
+				F2E676F117374CC900AD9308 /* OpenEars1.languagemodel */,
+				F2E676F217374CC900AD9308 /* OpenEars2.gram */,
+				F2E676F317374CC900AD9308 /* OpenEarsCorpus.txt */,
+				F2E676F417374CC900AD9308 /* Slt.framework */,
+			);
+			path = Framework;
+			sourceTree = "<group>";
+		};
+		F2E676E617374CC900AD9308 /* hub4wsj_sc_8k */ = {
+			isa = PBXGroup;
+			children = (
+				F2E676E717374CC900AD9308 /* feat.params */,
+				F2E676E817374CC900AD9308 /* mdef */,
+				F2E676E917374CC900AD9308 /* means */,
+				F2E676EA17374CC900AD9308 /* noisedict */,
+				F2E676EB17374CC900AD9308 /* sendump */,
+				F2E676EC17374CC900AD9308 /* transition_matrices */,
+				F2E676ED17374CC900AD9308 /* variances */,
+			);
+			path = hub4wsj_sc_8k;
+			sourceTree = "<group>";
+		};
+		F2E677231737663300AD9308 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F2E67712173755AA00AD9308 /* Joke.h */,
+				F2E67713173755AA00AD9308 /* Joke.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,10 +330,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2E676A917374BF100AD9308 /* InfoPlist.strings in Resources */,
-				F2E676B117374BF100AD9308 /* Default.png in Resources */,
-				F2E676B317374BF100AD9308 /* Default@2x.png in Resources */,
-				F2E676B517374BF100AD9308 /* Default-568h@2x.png in Resources */,
 				F2E676BB17374BF100AD9308 /* ViewController.xib in Resources */,
+				F2E676C217374C5100AD9308 /* Vh-5-chuck-norris-and-onions.jpg in Resources */,
+				F2E676C417374C6300AD9308 /* CN_icon.png in Resources */,
+				F2E676C617374C7400AD9308 /* CN_icon_small.png in Resources */,
+				F2E676F517374CC900AD9308 /* cmu07a.dic in Resources */,
+				F2E676F617374CC900AD9308 /* feat.params in Resources */,
+				F2E676F717374CC900AD9308 /* mdef in Resources */,
+				F2E676F817374CC900AD9308 /* means in Resources */,
+				F2E676F917374CC900AD9308 /* noisedict in Resources */,
+				F2E676FA17374CC900AD9308 /* sendump in Resources */,
+				F2E676FB17374CC900AD9308 /* transition_matrices in Resources */,
+				F2E676FC17374CC900AD9308 /* variances in Resources */,
+				F2E676FE17374CC900AD9308 /* OpenEars1.dic in Resources */,
+				F2E676FF17374CC900AD9308 /* OpenEars1.gram in Resources */,
+				F2E6770017374CC900AD9308 /* OpenEars1.languagemodel in Resources */,
+				F2E6770117374CC900AD9308 /* OpenEars2.gram in Resources */,
+				F2E6770217374CC900AD9308 /* OpenEarsCorpus.txt in Resources */,
+				F2E6770B1737536800AD9308 /* JokeViewController.xib in Resources */,
+				F2E6771A173762A000AD9308 /* Default.png in Resources */,
+				F2E6771C173762AD00AD9308 /* Default-568h@2x.png in Resources */,
+				F2E6771E173762C700AD9308 /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +364,18 @@
 				F2E676AB17374BF100AD9308 /* main.m in Sources */,
 				F2E676AF17374BF100AD9308 /* AppDelegate.m in Sources */,
 				F2E676B817374BF100AD9308 /* ViewController.m in Sources */,
+				F2E676DB17374CA100AD9308 /* AFHTTPClient.m in Sources */,
+				F2E676DC17374CA100AD9308 /* AFHTTPRequestOperation.m in Sources */,
+				F2E676DD17374CA100AD9308 /* AFImageRequestOperation.m in Sources */,
+				F2E676DE17374CA100AD9308 /* AFJSONRequestOperation.m in Sources */,
+				F2E676DF17374CA100AD9308 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				F2E676E017374CA100AD9308 /* AFPropertyListRequestOperation.m in Sources */,
+				F2E676E117374CA100AD9308 /* AFURLConnectionOperation.m in Sources */,
+				F2E676E217374CA100AD9308 /* AFXMLRequestOperation.m in Sources */,
+				F2E676E317374CA100AD9308 /* UIImageView+AFNetworking.m in Sources */,
+				F2E6770617374CFF00AD9308 /* MBProgressHUD.m in Sources */,
+				F2E6770A1737536800AD9308 /* JokeViewController.m in Sources */,
+				F2E67714173755AB00AD9308 /* Joke.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +460,10 @@
 		F2E676BF17374BF100AD9308 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/ChuckNorrisChallenge/Framework\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ChuckNorrisChallenge/ChuckNorrisChallenge-Prefix.pch";
 				INFOPLIST_FILE = "ChuckNorrisChallenge/ChuckNorrisChallenge-Info.plist";
@@ -271,6 +475,10 @@
 		F2E676C017374BF100AD9308 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/ChuckNorrisChallenge/Framework\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ChuckNorrisChallenge/ChuckNorrisChallenge-Prefix.pch";
 				INFOPLIST_FILE = "ChuckNorrisChallenge/ChuckNorrisChallenge-Info.plist";

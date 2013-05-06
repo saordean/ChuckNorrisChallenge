@@ -7,7 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Joke.h"
+#import <Slt/Slt.h>
+#import <OpenEars/FliteController.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<UIAlertViewDelegate, UITableViewDataSource>
+
+// Added to support the Open Ears TTS framework
+@property (strong, nonatomic) FliteController *fliteController;
+@property (strong, nonatomic) Slt *slt;
+
+// Added to handle the get joke button
+- (IBAction)getJokeButton:(id)sender;
+
+// Added to allow for swiping
+@property (nonatomic, strong) UISwipeGestureRecognizer *swipeJokesRight;
+- (IBAction) handleJokeSwipes:(UIGestureRecognizer *) sender;
 
 @end
