@@ -22,6 +22,8 @@
     UIViewController *rootView =[[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
     self.navController = [[UINavigationController alloc] initWithRootViewController:rootView];
     
+    // Get rid of the view toolbar
+    [self.navController setToolbarHidden:YES animated:NO];
     
     // set as root view
     [[self window] setRootViewController:self.navController];

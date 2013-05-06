@@ -8,8 +8,11 @@
 
 #import "JokeViewController.h"
 #import "AFNetworking.h"
+#import <UIKit/UIKit.h>
 
 @interface JokeViewController ()
+
+@property (strong, nonatomic) NSString *phrase;
 
 @property (nonatomic, strong) NSArray *jokes;
 
@@ -17,11 +20,13 @@
 
 @implementation JokeViewController
 
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        
     }
     return self;
 }
@@ -31,15 +36,35 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    self.swipeJokesLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(leftSwipeHandler:)];
-    self.swipeJokesLeft.direction = UISwipeGestureRecognizerDirectionLeft;
+    self.swipeJokesRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(rightSwipeHandler:)];
+    self.swipeJokesRight.direction = UISwipeGestureRecognizerDirectionRight;
     // I think the line below accomplishes the same as above (?)
-    //[_swipeJokesLeft setDirection:UISwipeGestureRecognizerDirectionLeft];
-    [self.view addGestureRecognizer:self.swipeJokesLeft];
+    //[_swipeJokesLeft setDirection:UISwipeGestureRecognizerDirectionRight];
+    [self.view addGestureRecognizer:self.swipeJokesRight];
     
-    self.title = @"Last Ten Chuck Norris Jokes";
+    // Set the title of the view toolbar, and the text on the back button
+    self.title = @"Current joke";
+    //NSArray *toolbarStuff = [[NSArray alloc] initWithObjects:@"junk",@"junk",@"junk",nil];
+    //[self setToolbarItems:toolbarStuff animated:YES];
     
-    [self.oldJokesTableView reloadData];
+    // Pass the URL to the method that will return a randowm Chuck Norris joke"
+    _phrase = [[Joke alloc] isFound:@"http://api.icndb.com/jokes/random/" ];
+ 
+    
+    // Set the custom font for the label: jokeText
+    UIFont *newFont = [UIFont fontWithName:@"celticmd" size:14];
+    _jokeText.font = newFont;
+    
+    // Display the joke in the JokeText label
+    _jokeText.text = _phrase;
+    
+    // Display the joke on the console
+    //NSLog(@"%@", _phrase);
+
+    // Speak the joke using the TTS framework
+    [self.fliteController say:_phrase withVoice:self.slt];
+    
+    //[self.oldJokesTableView reloadData];
     
 }
 
@@ -105,7 +130,7 @@
 
 
 
-- (void) leftSwipeHandler:(UIGestureRecognizer *) recognizer {
+- (void) rightSwipeHandler:(UIGestureRecognizer *) recognizer {
     UISwipeGestureRecognizerDirection direction = [(UISwipeGestureRecognizer *) recognizer direction];
     
     switch (direction) {
@@ -117,15 +142,15 @@
             break;
         case UISwipeGestureRecognizerDirectionLeft:
             NSLog(@"left");
-            [self.navigationController popViewControllerAnimated:YES];
-            break;
-        case UISwipeGestureRecognizerDirectionRight:
             // The statements below are found in the ViewController.m for this application and allow this veiw to be
             // reached via a right swipe
-            //NSLog(@"right");
+            //NSLog(@"left");
             //JokeViewController *jokeViewController = [[JokeViewController alloc]  initWithNibName:@"JokeViewController"
             //                                                                               bundle:nil];
             //[self.navigationController pushViewController:jokeViewController animated:YES];
+            break;
+        case UISwipeGestureRecognizerDirectionRight:
+            [self.navigationController popViewControllerAnimated:YES];
             break;
     }
 }

@@ -15,8 +15,6 @@
 
 @interface ViewController ()
 
-@property (strong, nonatomic) NSString *phrase;
-
 @end
 
 @implementation ViewController
@@ -37,11 +35,11 @@
     //    - Up Swipe - no action
     //    - Down Swipt - no action
     
-    self.swipeJokesRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(rightSwipeHandler:)];
-    self.swipeJokesRight.direction = UISwipeGestureRecognizerDirectionRight;
+    self.swipeJokesLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(leftSwipeHandler:)];
+    self.swipeJokesLeft.direction = UISwipeGestureRecognizerDirectionLeft;
     // I think the line below accomplishes the same as above (?)
-    //[_swipeJokesRight setDirection:UISwipeGestureRecognizerDirectionRight];
-    [self.view addGestureRecognizer:self.swipeJokesRight];
+    //[_swipeJokesLeft setDirection:UISwipeGestureRecognizerDirectionLeft];
+    [self.view addGestureRecognizer:self.swipeJokesLeft];
     
 }
 
@@ -53,21 +51,13 @@
 
 
 - (IBAction)getJokeButton:(id)sender {
-    
-    // Pass the URL to the method that will return a randowm Chuck Norris joke"
-    _phrase = [[Joke alloc] isFound:@"http://api.icndb.com/jokes/random/" ];
-    NSLog(@"%@", _phrase);
-    JokeViewController *jokeViewController = [[JokeViewController alloc]  initWithNibName:@"JokeViewController" bundle:nil];
+    JokeViewController *jokeViewController = [[JokeViewController alloc] initWithNibName:@"JokeViewController" bundle:nil];
     [self.navigationController pushViewController:jokeViewController animated:YES];
-
-    // Say the joke
-    [self.fliteController say:_phrase withVoice:self.slt];
-
 }
 
 
-- (void) rightSwipeHandler:(UIGestureRecognizer *) recognizer {
-    NSLog(@"rightSwipeHandler method entered");
+- (void) leftSwipeHandler:(UIGestureRecognizer *) recognizer {
+    NSLog(@"leftSwipeHandler method entered");
     UISwipeGestureRecognizerDirection direction = [(UISwipeGestureRecognizer *) recognizer direction];
     
     switch (direction) {
@@ -79,14 +69,15 @@
             break;
         case UISwipeGestureRecognizerDirectionLeft:
             NSLog(@"left");
-            //[self.navigationController popViewControllerAnimated:YES];
-            break;
-        case UISwipeGestureRecognizerDirectionRight:
-            NSLog(@"right");
             JokeViewController *jokeViewController = [[JokeViewController alloc]  initWithNibName:@"JokeViewController" bundle:nil];
             [self.navigationController pushViewController:jokeViewController animated:YES];
             break;
     }
+     //   case UISwipeGestureRecognizerDirectionRight:
+     //       NSLog(@"right");
+     //       //[self.navigationController popViewControllerAnimated:YES];
+     //       break;
+    //}
 }
 
 

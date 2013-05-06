@@ -17,10 +17,11 @@
 @property (strong, nonatomic) Slt *slt;
 
 // Added to allow for swiping
-@property (nonatomic, strong) UISwipeGestureRecognizer *swipeJokesLeft;
-- (void) leftSwipeHandler:(UIGestureRecognizer *) recognizer;
+@property (nonatomic, strong) UISwipeGestureRecognizer *swipeJokesRight;
+- (void) rightSwipeHandler:(UIGestureRecognizer *) recognizer;
 
-// Added for the table view that holds old jokes
-@property (nonatomic, strong) IBOutlet UITableView *oldJokesTableView;
+// Outlets for the joke text and joke image
+@property (strong, nonatomic) IBOutlet UILabel *jokeText;
+@property (strong, nonatomic) IBOutlet UIImageView *jokeImage;
 
 @end

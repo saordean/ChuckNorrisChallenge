@@ -54,6 +54,7 @@
 		F2E677201737645400AD9308 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2E6771F1737645400AD9308 /* MobileCoreServices.framework */; };
 		F2E677221737648500AD9308 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2E677211737648500AD9308 /* SystemConfiguration.framework */; };
 		F2E6772617378AB300AD9308 /* JokeImage.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E6772517378AB300AD9308 /* JokeImage.m */; };
+		F2E677281737FA7000AD9308 /* celticmd.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2E677271737EA3D00AD9308 /* celticmd.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -124,6 +125,7 @@
 		F2E677211737648500AD9308 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		F2E6772417378AB300AD9308 /* JokeImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JokeImage.h; sourceTree = "<group>"; };
 		F2E6772517378AB300AD9308 /* JokeImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JokeImage.m; sourceTree = "<group>"; };
+		F2E677271737EA3D00AD9308 /* celticmd.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = celticmd.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +204,7 @@
 		F2E676A517374BF100AD9308 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F2E677271737EA3D00AD9308 /* celticmd.ttf */,
 				F2E6771D173762C700AD9308 /* Default@2x.png */,
 				F2E67719173762A000AD9308 /* Default.png */,
 				F2E676C517374C7400AD9308 /* CN_icon_small.png */,
@@ -334,6 +337,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2E677281737FA7000AD9308 /* celticmd.ttf in Resources */,
 				F2E676A917374BF100AD9308 /* InfoPlist.strings in Resources */,
 				F2E676BB17374BF100AD9308 /* ViewController.xib in Resources */,
 				F2E676C217374C5100AD9308 /* Vh-5-chuck-norris-and-onions.jpg in Resources */,
